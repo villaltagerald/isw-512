@@ -1,0 +1,73 @@
+body{
+    margin:0px auto;
+    text-align:center;
+    font-family: "Centaur", "Calibri", "sans-serif";
+    background-image: url("../imagenes/fondo.png");
+    background-size: 100%;
+  }
+.cuadro{
+    border: 2px solid rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0.616);
+    border-radius: 8px;
+    padding: 5px;
+    margin: 10% 20% 10% 20%;
+}
+
+table{
+    margin:0px auto;
+    width: 100%;
+    }
+th, td {
+    border-color: #020c0c;
+    }
+    
+tr:nth-child(even) {
+    background-color: #96a7c7;
+}
+img{
+    width: 60%; 
+    height: 60%;
+}
+img:hover{
+    width: 68%; 
+    height: 68%;
+}
+iframe 
+{
+    display: block; 
+    width: 100%; 
+    border: none; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    height:90px;
+}
+fieldset{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+}
+dialog::backdrop {
+    background: repeating-linear-gradient(
+    30deg,
+    rgba(24, 194, 236, 0.2),
+    rgba(24, 194, 236, 0.2) 1px,
+    rgba(24, 194, 236, 0.3) 1px,
+    rgba(24, 194, 236, 0.3) 20px);
+    backdrop-filter: blur(1px)
+  }
+button {
+    background-color: #008CBA;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover{
+    color: rgb(0, 0, 0);
+    }

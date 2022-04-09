@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tablero</title>
+    <link rel="stylesheet" href="css/Dashboard.css">
+    
+</head>
+
+<body>
+    <div class="cuadro">
+        <iframe src="Menu.html"></iframe>
+
+        <h1>Tablero</h1>
+        <p>Mi Rides</p>
+        <fieldset>
+            <p>Tu lista actual de viajes</p>
+            <table id="Tabla" >
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Salida</th>
+                        <th>Destino</th>
+                        <th style="width:5%"> </th>
+                        <th style="width:5%"> </th>
+                        <th style="width:5%"> </th>
+                    </tr>
+                </thead>
+                <tbody id="cTabla">
+
+                </tbody>
+            </table>
+            <!--
+                <tr>
+                    <th>BRETE</th>
+                    <th>BARRIO LOS ANGELES</th>
+                    <th>CIUDAD QUESADA</th>
+                    <th><a href="Rides.html"><img src="imagenes/editar.png"></a></th>
+                    <th><img src="imagenes/eliminar.png" onclick="showThisDialog()"></th>
+                    <th><a href="RidesV.html"><img src="imagenes/ver.png"></th>
+                </tr>
+                <tr>
+                    <th>CASA</th>
+                    <th>CIUDAD QUESADA</th>
+                    <th>LOS ANGELES</th>
+                    <th><a href="Rides.html"><img src="imagenes/editar.png"></a></th>
+                    <th><img src="imagenes/eliminar.png" onclick="showThisDialog()"></th>
+                    <th><a href="RidesV.html"><img src="imagenes/ver.png"></th>
+                </tr>
+                <tr>
+                    <th>OFICINA CHEPE</th>
+                    <th>CIUDAD QUESADA</th>
+                    <th>SAN PEDRO</th>
+                    <th><a href="Rides.html"><img src="imagenes/editar.png"></a></th>
+                    <th><img src="imagenes/eliminar.png" onclick="showThisDialog()"></th>
+                    <th><a href="RidesV.html"><img src="imagenes/ver.png"></th>
+                </tr>-->
+        </fieldset>
+        <dialog id="this-dialog">
+            <p style="font-size: 20px;"> Se eliminar el Ride</p>
+            <button onclick="eliminarRide()">ELIMINAR </button>
+            <button onclick="hideThisDialog()">CANCELAR </button>
+        </dialog>
+    </div>
+    <script src="js/Dashboard.js"></script>
+</body>
+
+</html>

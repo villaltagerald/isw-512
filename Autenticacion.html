@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Autenticacion</title>
+    <link rel="stylesheet" href="css/Autenticacion.css">
+</head>
+
+<body>
+    <div class="cuadro">
+        <h1>TicoRides</h1>
+        <from>
+            <img src="imagenes/user1.png" class="l_img">
+            <input type="text" id="usuario" name="usuario"><br>
+
+            <img src="imagenes/passw.png" class="l_img">
+            <input type="password" id="contrasena" name="contrasena"><br>
+
+        </from>
+        <p id="error"></p>
+        <p>No es usuario? <a href="Registro_de_usuarios.html">Registrarse aquí</a></p>
+
+        <button onclick="autenticar()">Ingresar</button>
+        <!--document.location='Dashboard.html'-->
+    </div>
+    <script src="js/Autenticacion.js"></script>
+</body>
+
+</html>

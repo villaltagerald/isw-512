@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ajustes</title>
+  <link rel="stylesheet" href="css/Settings.css">
+</head>
+
+<body>
+  <div class="cuadro">
+    <iframe src="Menu.html"></iframe>
+    <h1>Ajustes</h1>
+
+    <form>
+      <label for="name">Nombre Completo:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="papellido">Primer Apellido:</label>
+      <input type="text" id="papellido" name="papellido" onkeyup="userName()"><br>
+
+      <label for="sapellido">Segundo Apellido:</label>
+      <input type="text" id="sapellido" name="sapellido" onkeyup="userName()"><br>
+
+      <label for="speed">Promedio de velocidad:</label>
+      <input type="text" id="speed" name="speed"><br>
+
+      <label for="telefono">Telefono:</label>
+      <input type="text" id="telefono" name="telefono"><br>
+
+      <label for="about">Acerca de mi:</label>
+      <textarea id="about" name="about" rows="4" cols="20"></textarea><br><br>
+
+
+    </form>
+    <a href="Settings.html"><img src="imagenes/cancelar.png"></a>
+    <a  onclick="guarda()"><img src="imagenes/guardar.png"></a>
+    <!--href="Settings.html"  onclick="verRide()"-->
+  </div>
+  <script src="js/Setting.js"></script>
+</body>
+
+</html>
