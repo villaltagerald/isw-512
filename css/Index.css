@@ -2,7 +2,7 @@ body{
   margin:0px auto;
   text-align:center;
   font-family: "Centaur", "Calibri", "sans-serif";
-  background-color:rgba(255, 255, 255, 0.616);
+  background-image: url("../imagenes/fondo.png");
   background-size: 100%;
 }
 .cuadro{
@@ -56,15 +56,25 @@ fieldset{
   margin:0px 47px;
 }
 .i_img{
-  width: 8%;
-  height: 8%;
+  width: 4%;
+  height: 4%;
   position: static;
-  margin-left: 85%;
-  margin-bottom: -5%;
+  margin-left: 95%;
+  margin-bottom: 0%;
 }
 
 .i_img:hover{
-  width: 9%;
-  height: 9%;
-  margin-bottom: -6%;
+  width: 5%;
+  height: 5%;
+  margin-bottom: -1%;
+}
+
+iframe 
+{
+    display: block; 
+    width: 100%; 
+    border: none; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    height:90px;
 }

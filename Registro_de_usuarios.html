@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Registro de usuarios</title>
     <link rel="stylesheet" href="css/Registro_de_usuarios.css">
 </head>
 
 <body>
-    <div class="cuadro">
+    <div class="container" style="background: rgba(255, 255, 255, 0.616);">
         <h1>TicoRides</h1>
         <form id="form">
             <label for="name">Nombre:</label>
@@ -30,12 +33,12 @@
 
             <label fro="contrasena2">Repetir la Contraseña:</label>
             <input type="password" id="contrasena2" name="contrasena2" onkeyup="validarClave()">
-            
+
         </form>
         <p id="error"></p>
         <p>Ya esta registrado? <a href="Autenticacion.html">Acceda aquí</a></p>
 
-        <button onclick="registro()" >Registrarse</button>
+        <button onclick="registro()">Registrarse</button>
         <!--document.location='Autenticacion.html'-->
     </div>
     <script src="js/Registro_de_usuarios.js"></script>

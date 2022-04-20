@@ -1,41 +1,107 @@
-* {
+
+  html, body {
     margin: 0;
     padding: 0;
+    font-family: "Roboto", Arial;
+  }
+  .navbar {
+    width: 100%;
+    padding: 5px;
+    background-color: #1a1a27;
     box-sizing: border-box;
   }
-
-  nav {
-    height: 60px;
-    background-color: #008bbaa6;
-    text-align: center;
-    top: 20%;
+  .navbar .contenido {
+    max-width: 1024px;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
   }
-
-  nav ul {
+  .bars ul {
+    display: flex;
+    align-items: center;
     list-style: none;
-    display: inline-block;
-    padding: 18px;
+    width: 400px;
+    justify-content: space-between;
+    padding: 0;
+    padding-left: 4px;
   }
-
-  nav ul li {
-    float: left;
-    margin-top: 20px;
-  }
-
-  nav ul li a {
-    color: black;
-    font-weight: bold;
+  .bars ul li a {
     text-decoration: none;
-    font-size: 20px;
-    padding: 18px;
+    color:#a2a3b7;
+    transition: 1s;
+    text-transform: uppercase;
   }
-
-  nav ul li a:hover {
-    background-color: #005d7cf8;
-    border-radius: 10%;
+  .bars ul li a:hover {
+    text-decoration: none;
+    color:white;
+  }
+  div.title {
+    display: flex;
+    align-items: center;
+    padding-right: 4px;
+  }
+  div.title a {
+    text-decoration: none;
     color: white;
   }
-  div{
-    float: right;
+  div.title h2{
+    padding: 0;
+    margin: 0;
   }
-
+  
+  .bars-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 7px;
+    top: 11px;
+    color: #a2a3b7;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+      .navbar .contenido {
+          justify-content: flex-end;
+      }
+      .bars-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .bars {
+          position: fixed;
+          background: rgba(0, 0, 0, 0.897);
+          z-index: 98;
+          top: 0;
+          left: -100vw;
+          width: 100vw;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          transition: .3s;
+      }
+      .bars.is-active {
+          left: 0;
+      }
+      .bars ul {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+      }
+      .bars ul li {
+          padding: 5px;
+      }
+      .bars ul li a {
+          color: rgb(255, 255, 255);
+          font-weight: 700;
+          text-decoration: underline;
+      }
+      div.title h2 {
+          padding: 10.5px;
+      }
+      
+  }

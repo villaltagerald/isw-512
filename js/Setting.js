@@ -1,3 +1,11 @@
+window.onload = siteLoad();
+
+function siteLoad() {
+    if (localStorage.getItem('username') == null) {
+        document.location = 'Autenticacion.html';
+    }
+}
+
 function objUsuario(nombre, pApellido, sApellido, telefono, uNombre, contrasena,acerca,velocidad) {
     this.nombre = nombre;
     this.pApellido = pApellido;

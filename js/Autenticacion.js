@@ -1,3 +1,10 @@
+window.onload = siteLoad();
+
+function siteLoad() {
+    if (localStorage.getItem('username') != null) {
+        document.location = 'index.html';
+    }
+}
 function ojbUsuario(nombre, pApellido, sApellido, telefono, uNombre, contrasena,acerca,velocidad) {
     this.nombre = nombre;
     this.pApellido = pApellido;

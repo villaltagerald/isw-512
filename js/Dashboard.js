@@ -1,3 +1,11 @@
+window.onload = siteLoad();
+
+function siteLoad() {
+    if (localStorage.getItem('username') == null) {
+        document.location = 'Autenticacion.html';
+    }
+}
+
 function objRides(usuario, nombre, salida, destino, descripcion, horaSalida, horaLlegada, dias) {
     this.usuario = usuario;
     this.nombre = nombre;
@@ -35,8 +43,8 @@ function myFunction(x) {
         });
         json.push(data);
     });
-    NombreRidesE = json[x.rowIndex-1].Nombre;
-    localStorage.setItem('verRide',NombreRidesE);
+    NombreRidesE = json[x.rowIndex - 1].Nombre;
+    localStorage.setItem('verRide', NombreRidesE);
 }
 
 //dialogo
@@ -62,6 +70,6 @@ function eliminarRide() {
         };
     };
     localStorage.setItem('localRides', JSON.stringify(arrayRide));
-    document.location='Dashboard.html';
+    document.location = 'Dashboard.html';
 };
 //

@@ -1,21 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tablero</title>
-    <link rel="stylesheet" href="css/Dashboard.css">
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/Dashboard.css">
+    <link rel="stylesheet" href="css/Menu.css">
 </head>
 
 <body>
-    <div class="cuadro">
-        <iframe src="Menu.html"></iframe>
-
+    <header>
+        <i class="fa fa-bars bars-button" aria-hidden="true" id="bars-button"></i>
+        <div class="navbar">
+            <div class="contenido">
+                <nav class="bars">
+                    <ul>
+                        <li><a href="index.html" target="_parent">Inicio</a></li>
+                        <li><a href="Dashboard.html" target="_parent">Tablero</a></li>
+                        <li><a href="Rides.html" target="_parent">Rides</a></li>
+                        <li><a href="Settings.html" target="_parent">Ajustes</a></li>
+                        <li><a href="index.html" onclick="salir()" target="_parent">Salir</a>
+                    </ul>
+                </nav>
+                <div class="title">
+                    <a href="index.html">
+                        <h2>TicoRides</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container" style="background: rgba(255, 255, 255, 0.616);">
         <h1>Tablero</h1>
         <p>Mi Rides</p>
         <fieldset>
             <p>Tu lista actual de viajes</p>
-            <table id="Tabla" >
+            <table id="Tabla">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -30,31 +54,7 @@
 
                 </tbody>
             </table>
-            <!--
-                <tr>
-                    <th>BRETE</th>
-                    <th>BARRIO LOS ANGELES</th>
-                    <th>CIUDAD QUESADA</th>
-                    <th><a href="Rides.html"><img src="imagenes/editar.png"></a></th>
-                    <th><img src="imagenes/eliminar.png" onclick="showThisDialog()"></th>
-                    <th><a href="RidesV.html"><img src="imagenes/ver.png"></th>
-                </tr>
-                <tr>
-                    <th>CASA</th>
-                    <th>CIUDAD QUESADA</th>
-                    <th>LOS ANGELES</th>
-                    <th><a href="Rides.html"><img src="imagenes/editar.png"></a></th>
-                    <th><img src="imagenes/eliminar.png" onclick="showThisDialog()"></th>
-                    <th><a href="RidesV.html"><img src="imagenes/ver.png"></th>
-                </tr>
-                <tr>
-                    <th>OFICINA CHEPE</th>
-                    <th>CIUDAD QUESADA</th>
-                    <th>SAN PEDRO</th>
-                    <th><a href="Rides.html"><img src="imagenes/editar.png"></a></th>
-                    <th><img src="imagenes/eliminar.png" onclick="showThisDialog()"></th>
-                    <th><a href="RidesV.html"><img src="imagenes/ver.png"></th>
-                </tr>-->
+
         </fieldset>
         <dialog id="this-dialog">
             <p style="font-size: 20px;"> Se eliminar el Ride</p>
@@ -63,6 +63,7 @@
         </dialog>
     </div>
     <script src="js/Dashboard.js"></script>
+    <script src="js/Menu.js"></script>
 </body>
 
 </html>

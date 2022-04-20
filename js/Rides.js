@@ -1,4 +1,18 @@
-//falta guardar el usuario a quien pertenese el ride
+window.onload = siteLoad();
+
+var verRides;
+function siteLoad() {
+    verRides = localStorage.getItem('verRide');
+    if (verRides != '') {
+        mostrarRide();
+        localStorage.setItem('verRide', null);
+        console.log(verRides);
+    };
+    if (localStorage.getItem('username') == null) {
+        document.location = 'Autenticacion.html';
+    };
+
+};
 
 function objRides(usuario, nombre, salida, destino, descripcion, horaSalida, horaLlegada, dias) {
     this.usuario = usuario;
@@ -19,7 +33,6 @@ function objDias(lunes, martes, miercoles, jueves, viernes, sabado, domingo) {
     this.sabado = sabado;
     this.domingo = domingo;
 };
-let verRides = localStorage.getItem('verRide');
 //localStorage.removeItem('verRide');
 
 function registro() {
@@ -46,8 +59,8 @@ function registro() {
         dias);
     for (let i = 0; i < arrayRide.length; i++) {
         if (localStorage.getItem('username') == arrayRide[i].usuario && arrayRide[i].nombre == verRides) {
-            arrayRide.splice(i,1);
-         };
+            arrayRide.splice(i, 1);
+        };
     };
     arrayRide.push(ride);
     localStorage.setItem('localRides', JSON.stringify(arrayRide));
@@ -76,4 +89,3 @@ function mostrarRide() {
         };
     };
 };
-mostrarRide();
