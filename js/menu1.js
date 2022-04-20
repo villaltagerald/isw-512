@@ -1,4 +1,3 @@
-
 const limit_size_screen = window.matchMedia('screen and (max-width: 768px)');
 const bars = document.querySelector('.barsmenu');
 const barsButton = document.querySelector('.bars-button');
@@ -16,8 +15,4 @@ function hideShow() {
 	} else {
 		bars.classList.add('is-active');
 	}
-}
-
-function salir(){
-    localStorage.removeItem('username');
 }
