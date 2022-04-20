@@ -1,21 +1,24 @@
-body{
-    margin:0px auto;
-    text-align:center;
-    font-family: "Centaur", "Calibri", "sans-serif";
-    background-image: url("../imagenes/fondo.png");
-    background-size: 100%;
-  }
-.cuadro{
-  border: 2px solid rgba(255, 255, 255, 0);
-  background: rgba(255, 255, 255, 0.616);
-  border-radius: 8px;
-  padding: 5px;
-  margin: 10% 40% 10% 40%;
+body {
+  margin: 0px auto;
+  text-align: center;
+  font-family: "Centaur", "Calibri", "sans-serif";
+  background-image: url("../imagenes/fondo.png");
+  background-size: 100%;
 }
-.l_img{
-  width: 9%;
-  height: 9%;
+
+.l_img {
+  width: 17%;
+  height: 17%;
 }
+
+form {
+  margin: 0 auto;
+  width: 20%;
+  height: auto;
+  line-height: 25pt;
+  text-align: right;
+}
+
 button {
   background-color: #008CBA;
   border: none;
@@ -29,6 +32,18 @@ button {
   margin: 4px 2px;
   cursor: pointer;
 }
-button:hover{
+
+button:hover {
   color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    width: 75%;
+  }
+
+  .l_img {
+    width: 18%;
+    height: 18%;
+  }
 }

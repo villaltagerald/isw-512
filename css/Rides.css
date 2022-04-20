@@ -45,3 +45,32 @@ iframe
   overflow-x: hidden;
   height:90px;
 }
+.body{
+  margin: 0 auto;
+  width: 50%;
+  height: auto;
+  line-height: 25pt;
+}
+.bodydias{
+  margin: 0 left;
+  width: 20%;
+  height: auto;
+  line-height: 25pt;
+}
+.bodyhoras{
+  margin: 0 left;
+  width: 40%;
+  height: auto;
+  line-height: 25pt;
+}
+@media screen and (max-width: 768px) {
+  .body{
+    width: 100%;
+  }
+  .bodyhoras{
+    width: 80%;
+  }
+  .bodydias{
+    width: 40%;
+  }
+}

@@ -6,38 +6,33 @@ body{
   background-size: 100%;
 }
 img{
-  width: 8%;
-  height: 8%;
+  width: 4%;
+  height: 4%;
 }
 
 img:hover{
-  width: 8.5%;
-  height: 8.5%;
-}
-.cuadro{
-  border: 2px solid rgba(255, 255, 255, 0);
-  background: rgba(255, 255, 255, 0.616);
-  border-radius: 8px;
-  padding: 2px;
-  margin: 10% 30% 10% 30%;
-
+  width: 4.5%;
+  height: 4.5%;
 }
 
 form{
   margin: 0 auto;
-  width: auto;
-  height: 100%;
+  width: 30%;
+  height: auto;
   line-height: 25pt;
   text-align:right;
-  margin-right: 20%;
-  margin-left: 20%;
   }
 
-iframe {
-  display: block; 
-  width: 100%; 
-  border: none; 
-  overflow-y: auto; 
-  overflow-x: hidden;
-  height:90px;
+@media screen and (max-width: 768px) {
+  form{
+    width: 85%;
+    }
+  img{
+    width: 8%;
+    height: 8%;
+  }
+  img:hover{
+    width: 9%;
+    height: 9%;
+  }
 }

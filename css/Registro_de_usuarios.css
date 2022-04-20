@@ -15,8 +15,8 @@ body{
  
 form{
   margin: 0 auto;
-  width: 320px;
-  height: 250px;
+  width: 30%;
+  height: auto;
   line-height: 25pt;
   text-align:right;
   }
@@ -43,5 +43,9 @@ button:disabled:hover{
 button:hover{
   color: rgb(0, 0, 0);
 }
-    
-    
+   
+@media screen and (max-width: 768px) {
+  form{
+    width: 90%;
+    }
+}    

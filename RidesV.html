@@ -33,57 +33,67 @@
             </div>
         </div>
     </header>
-    <div class="container" style="background: rgba(255, 255, 255, 0.616);">
+    <div class="body">
         <h1>Rides</h1>
         <form>
-            <label for="name">Nombre Ride:</label>
-            <input type="text" id="name" name="name" disabled><br>
-
-            <label for="salida">Lugar de Salida:</label>
-            <input type="text" id="salida" name="salida" disabled><br>
-
-            <label for="destino">Destino:</label>
-            <input type="text" id="destino" name="destino" disabled><br>
-
-            <label for="descripcion">Descripcion:</label>
-            <input type="text" id="descripcion" name="descripcion" disabled><br>
-
-
+            <div class="input-group mb-3">
+                <label for="name" class="input-group-text">Nombre Ride</label>
+                <input type="text" id="name" name="name" class="form-control" disabled>
+            </div>
+            <div class="input-group mb-3">
+                <label for="salida" class="input-group-text">Lugar de Salida</label>
+                <input type="text" id="salida" name="salida" class="form-control" disabled>
+            </div>
+            <div class="input-group mb-3">
+                <label for="destino" class="input-group-text">Destino</label>
+                <input type="text" id="destino" name="destino" class="form-control" disabled>
+            </div>
+            <div class="input-group mb-3">
+                <label for="descripcion" class="input-group-text">Descripcion</label>
+                <input type="text" id="descripcion" name="descripcion" class="form-control" disabled>
+            </div>
             <hr>
-            <label for="salida">Salida:</label>
-            <input type="time" id="hsalida" disabled><br>
-
-            <label for="destino">Llegada estimada:</label>
-            <input type="time" id="hdestino" disabled><br>
-            <div class="form-check form-switch">
-                <input type="checkbox" id="Lunes" name="Lunes" class="form-check-input" disabled>
-                <label for="Lunes">Lunes</label>
+            <div class="bodyhoras">
+                <div class="input-group mb-3">
+                    <label for="salida" class="input-group-text">Salida</label>
+                    <input type="time" id="hsalida" class="form-control" disabled>
+                </div>
+                <div class="input-group mb-3">
+                    <label for="destino" class="input-group-text">Llegada</label>
+                    <input type="time" id="hdestino" disabled class="form-control">
+                </div>
             </div>
-            <div class="form-check form-switch">
-                <input type="checkbox" id="Martes" name="Martes" class="form-check-input" disabled>
-                <label for="Martes">Martes</label>
+            <div class="bodydias">
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="Lunes" name="Lunes" class="form-check-input" disabled>
+                    <label for="Lunes">Lunes</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="Martes" name="Martes" class="form-check-input" disabled>
+                    <label for="Martes">Martes</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="Miercoles" name="Miercoles" class="form-check-input" disabled>
+                    <label for="Miercoles">Miercoles</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="Jueves" name="Jueves" class="form-check-input" disabled>
+                    <label for="Jueves">Jueves</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="Viernes" name="Viernes" class="form-check-input" disabled>
+                    <label for="Viernes">Viernes</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="Sabado" name="Sabado" class="form-check-input" disabled>
+                    <label for="Sabado">Sabado</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input type="checkbox" id="Domingo" name="Domingo" class="form-check-input" disabled>
+                    <label for="Domingo">Domingo</label>
+                </div>
             </div>
-            <div class="form-check form-switch">
-                <input type="checkbox" id="Miercoles" name="Miercoles" class="form-check-input" disabled>
-                <label for="Miercoles">Miercoles</label>
-            </div>
-            <div class="form-check form-switch">
-                <input type="checkbox" id="Jueves" name="Jueves" class="form-check-input" disabled>
-                <label for="Jueves">Jueves</label>
-            </div>
-            <div class="form-check form-switch">
-                <input type="checkbox" id="Viernes" name="Viernes" class="form-check-input" disabled>
-                <label for="Viernes">Viernes</label>
-            </div>
-            <div class="form-check form-switch">
-                <input type="checkbox" id="Sabado" name="Sabado" class="form-check-input" disabled>
-                <label for="Sabado">Sabado</label>
-            </div>
-            <div class="form-check form-switch">
-                <input type="checkbox" id="Domingo" name="Domingo" class="form-check-input" disabled>
-                <label for="Domingo">Domingo</label>
-            </div>
-    </form>
+        </form>
     </div>
     <script src="js/Rides.js"></script>
     <script src="js/Menu.js"></script>

@@ -12,30 +12,42 @@
 </head>
 
 <body>
-    <div class="container" style="background: rgba(255, 255, 255, 0.616);">
+    <div class="body">
         <h1>Ride</h1>
-
         <form>
-            <label for="name">Nombre Completo:</label>
-            <input type="text" id="name" name="name" placeholder="Readonly input" readonly><br>
-
-            <label for="speed">Promedio de velocidad:</label>
-            <input type="text" id="speed" name="speed" placeholder="Readonly input" readonly><br>
-
-            <label for="telefono">Telefono:</label>
-            <input type="text" id="telefono" name="telefono" placeholder="Readonly input" readonly><br>
-
-            <label for="lsalida">Lugar Salida:</label>
-            <input type="text" id="lsalida" name="lsalida" placeholder="Readonly input" readonly><br>
-
-            <label for="destino">Lugar Destino:</label>
-            <input type="text" id="destino" name="destino" placeholder="Readonly input" readonly><br>
-
-            <label for="hsalida">Hora Salida:</label>
-            <input type="time" id="hsalida" name="hsalida" placeholder="Readonly input" readonly><br>
-
-            <label for="hllegada">Hora Llegada:</label>
-            <input type="time" id="hllegada" name="hllegada" placeholder="Readonly input" readonly><br>
+            <div class="input-group mb-3">
+                <label for="name" class="input-group-text">Nombre Completo</label>
+                <input type="text" id="name" name="name" placeholder="Readonly input" class="form-control" readonly>
+            </div>
+            <div class="input-group mb-3">
+                <label for="speed" class="input-group-text">Promedio de velocidad</label>
+                <input type="text" id="speed" name="speed" placeholder="Readonly input" class="form-control" readonly>
+            </div>
+            <div class="input-group mb-3">
+                <label for="telefono" class="input-group-text">Telefono</label>
+                <input type="text" id="telefono" name="telefono" placeholder="Readonly input" class="form-control"
+                    readonly>
+            </div>
+            <div class="input-group mb-3">
+                <label for="lsalida" class="input-group-text">Lugar Salida</label>
+                <input type="text" id="lsalida" name="lsalida" placeholder="Readonly input" class="form-control"
+                    readonly>
+            </div>
+            <div class="input-group mb-3">
+                <label for="destino" class="input-group-text">Lugar Destino</label>
+                <input type="text" id="destino" name="destino" placeholder="Readonly input" class="form-control"
+                    readonly>
+            </div>
+            <div class="input-group mb-3">
+                <label for="hsalida" class="input-group-text">Hora Salida</label>
+                <input type="time" id="hsalida" name="hsalida" placeholder="Readonly input" class="form-control"
+                    readonly>
+            </div>
+            <div class="input-group mb-3">
+                <label for="hllegada" class="input-group-text">Hora Llegada</label>
+                <input type="time" id="hllegada" name="hllegada" placeholder="Readonly input" class="form-control"
+                    readonly>
+            </div>
         </form>
         <a href="index.html"><img src="imagenes/cancelar.png"></a>
     </div>
