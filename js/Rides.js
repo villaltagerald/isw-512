@@ -1,12 +1,11 @@
+var verRides = null;
 window.onload = siteLoad();
 
-var verRides;
 function siteLoad() {
     verRides = localStorage.getItem('verRide');
-    if (verRides != '') {
+    if (verRides != null) {
         mostrarRide();
         localStorage.setItem('verRide', null);
-        console.log(verRides);
     };
     if (localStorage.getItem('username') == null) {
         document.location = 'Autenticacion.html';
@@ -36,39 +35,48 @@ function objDias(lunes, martes, miercoles, jueves, viernes, sabado, domingo) {
 //localStorage.removeItem('verRide');
 
 function registro() {
-    let arrayRide = [];
-    if (localStorage.getItem('localRides') != null) {
-        arrayRide = JSON.parse(localStorage.getItem('localRides'));
-    };
-    let dias = new objDias(
-        document.getElementById('Lunes').checked,
-        document.getElementById('Martes').checked,
-        document.getElementById('Miercoles').checked,
-        document.getElementById('Jueves').checked,
-        document.getElementById('Viernes').checked,
-        document.getElementById('Sabado').checked,
-        document.getElementById('Domingo').checked)
-    let ride = new objRides(
-        localStorage.getItem('username'),
-        document.getElementById('name').value,
-        document.getElementById('salida').value,
-        document.getElementById('destino').value,
-        document.getElementById('descripcion').value,
-        document.getElementById('hsalida').value,
-        document.getElementById('hdestino').value,
-        dias);
-    for (let i = 0; i < arrayRide.length; i++) {
-        if (localStorage.getItem('username') == arrayRide[i].usuario && arrayRide[i].nombre == verRides) {
-            arrayRide.splice(i, 1);
+    if (document.getElementById('name').value.trim() != '' && document.getElementById('salida').value.trim() != '' && document.getElementById('destino').value.trim() != '' && document.getElementById('hsalida').value.trim() != '' && document.getElementById('hdestino').value.trim() != '') {
+        let arrayRide = [];
+        if (localStorage.getItem('localRides') != null) {
+            arrayRide = JSON.parse(localStorage.getItem('localRides'));
         };
-    };
-    arrayRide.push(ride);
-    localStorage.setItem('localRides', JSON.stringify(arrayRide));
+        let dias = new objDias(
+            document.getElementById('Lunes').checked,
+            document.getElementById('Martes').checked,
+            document.getElementById('Miercoles').checked,
+            document.getElementById('Jueves').checked,
+            document.getElementById('Viernes').checked,
+            document.getElementById('Sabado').checked,
+            document.getElementById('Domingo').checked)
+        let ride = new objRides(
+            localStorage.getItem('username'),
+            document.getElementById('name').value,
+            document.getElementById('salida').value,
+            document.getElementById('destino').value,
+            document.getElementById('descripcion').value,
+            document.getElementById('hsalida').value,
+            document.getElementById('hdestino').value,
+            dias);
+        if (verRides != null) {
+            for (let i = 0; i < arrayRide.length; i++) {
+                if (localStorage.getItem('username') == arrayRide[i].usuario && arrayRide[i].nombre == verRides) {
+                    arrayRide.splice(i, 1);
+                };
+            };
+        }
+        arrayRide.push(ride);
+        localStorage.setItem('localRides', JSON.stringify(arrayRide));
+        clear();
+        if (verRides != null && verRides != 'null') {
+            document.location = 'Dashboard.html';
+        }
+    }else{
+        document.getElementById('error').innerHTML='Falta informacion'
+    }
 };
 
 function mostrarRide() {
     let arrayRide = [];
-    console.log(verRides);
     arrayRide = JSON.parse(localStorage.getItem('localRides'));
     for (let i = 0; i < arrayRide.length; i++) {
         if (localStorage.getItem('username') == arrayRide[i].usuario && arrayRide[i].nombre == verRides) {
@@ -89,3 +97,28 @@ function mostrarRide() {
         };
     };
 };
+
+function clear() {
+    document.getElementById('name').value = '';
+    document.getElementById('salida').value = '';
+    document.getElementById('destino').value = '';
+    document.getElementById('descripcion').value = '';
+    document.getElementById('hsalida').value = '';
+    document.getElementById('hdestino').value = '';
+    document.getElementById('Lunes').checked = false;
+    document.getElementById('Martes').checked = false;
+    document.getElementById('Miercoles').checked = false;
+    document.getElementById('Jueves').checked = false;
+    document.getElementById('Viernes').checked = false;
+    document.getElementById('Sabado').checked = false;
+    document.getElementById('Domingo').checked = false;
+}
+
+function refres() {
+    if (verRides != null) {
+        localStorage.setItem('verRide', verRides);
+        document.location = 'Rides.html';
+    } else {
+        document.location = 'Rides.html';
+    }
+}

@@ -11,20 +11,22 @@
 </head>
 
 <body>
-    <h1>TicoRides</h1>
-    <form>
-        <div class="input-group mb-3">
-            <img src="imagenes/user1.png" class="l_img input-group-text" id="basic-addon1">
-            <input type="text" id="usuario" name="usuario" class="form-control">
-        </div>
-        <div class="input-group mb-3">
-            <img src="imagenes/passw.png" class="l_img input-group-text" id="basic-addon1">
-            <input type="password" id="contrasena" name="contrasena" class="form-control">
-        </div>
-    </form>
-    <p id="error"></p>
-    <p>No es usuario? <a href="Registro_de_usuarios.html">Registrarse aquí</a></p>
-    <button onclick="autenticar()">Ingresar</button>
+    <div class="body">
+        <h1>TicoRides</h1>
+        <form autocomplete="off">
+            <div class="input-group input-group-sm mb-3">
+                <img src="imagenes/user1.png" class="input-group-text l_img" id="inputGroup-sizing-sm">
+                <input type="text" id="usuario" name="usuario" class="form-control">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <img src="imagenes/passw.png" class="input-group-text l_img" id="inputGroup-sizing-sm">
+                <input type="password" id="contrasena" name="contrasena" class="form-control">
+            </div>
+        </form>
+        <p id="error"></p>
+        <p>No es usuario? <a href="Registro_de_usuarios.html">Registrarse aquí</a></p>
+        <button onclick="autenticar()">Ingresar</button>
+    </div>
     <script src="js/Autenticacion.js"></script>
 </body>
 

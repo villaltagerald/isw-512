@@ -37,9 +37,9 @@
     </header>
     <div class="body">
         <h1>Rides</h1>
-        <form>
+        <form autocomplete="off">
             <div class="input-group mb-3">
-                <label for="name" class="input-group-text">Nombre Ride</label>
+                <label for="name" class="input-group-text">Nombre</label>
                 <input type="text" id="name" name="name" class="form-control">
             </div>
             <div class="input-group mb-3">
@@ -98,8 +98,9 @@
                 </div>
             </div>
         </form>
-        <a href="Rides.html"><img src="imagenes/cancelar.png"></a>
-        <a onclick="registro()"><img src="imagenes/guardar.png"></a>
+        <div class="imag"><a onclick="refres()"><img src="imagenes/cancelar.png"></a>
+        <a onclick="registro()"><img src="imagenes/guardar.png"></a></div>
+        <p id="error"></p>
     </div>
     <script src="js/Rides.js"></script>
     <script src="js/Menu.js"></script>
