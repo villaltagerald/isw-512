@@ -1,10 +1,4 @@
-window.onload = siteLoad();
 
-function siteLoad() {
-    if (localStorage.getItem('username') == null) {
-        document.location = 'Autenticacion.html';
-    }
-}
 
 function objRides(usuario, nombre, salida, destino, descripcion, horaSalida, horaLlegada, dias) {
     this.usuario = usuario;
