@@ -12,15 +12,32 @@ img:hover{
     width: 8.5%;
     height: 8.5%;
   }
-
+.bodydias{
+    margin: 0 left;
+    width: 20%;
+    height: auto;
+    line-height: 25pt;
+}
+.bodyhoras{
+    margin: 0 left;
+    width: 40%;
+    height: auto;
+    line-height: 25pt;
+  }
 .body{
     margin: 0 auto;
-    width: 30%;
+    width: 40%;
     height: auto;
     line-height: 25pt;
   }
 @media screen and (max-width: 768px) {
     .body{
         width: 90%;
+    }
+    .bodydias{
+        width: 40%;
+      }
+    .bodyhoras{
+        width: 60%;
     }
 }

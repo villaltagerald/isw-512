@@ -23,28 +23,35 @@ let arrayRide = JSON.parse(localStorage.getItem('localRides'));
 if (arrayRide != null) {
     for (let i = 0; i < arrayRide.length; i++) {
         if (arrayRide[i].usuario == localStorage.getItem('username')) {
-            document.getElementById('cTabla').innerHTML += '<tr onclick="myFunction(this)"><td>' + arrayRide[i].nombre + '</td><td>' + arrayRide[i].salida + '</td><td>' + arrayRide[i].destino + '</td><td><a href="Rides.html" onclick="myFunction(x)"><img src="imagenes/editar.png"></a></td><td><img src="imagenes/eliminar.png" onclick="showThisDialog()"></td><td><a href="RidesV.html" onclick="myFunction(x)"><img src="imagenes/ver.png"></td></tr>';
+            document.getElementById('cTabla').innerHTML += '<tr onclick="myFunction(this)"><td>' + arrayRide[i].nombre + '</td><td>' + arrayRide[i].salida + '</td><td>' + arrayRide[i].destino + '</td><td><a href="Rides.html"><img src="imagenes/editar.png"></a></td><td><img src="imagenes/eliminar.png" onclick="showThisDialog()"></td><td><a href="RidesV.html" onclick="myFunction(this)"><img src="imagenes/ver.png"></td></tr>';
         };
     };
 };
-
+let columns;
+const cells = document.querySelectorAll('td');
+cells.forEach(cell => {
+    cell.addEventListener('click', () =>
+        columns = cell.cellIndex);
+});
 function myFunction(x) {
-    let headers = document.querySelectorAll('th');
-    let rows = document.querySelectorAll('tbody tr');
-    let json = [];
+    if (columns > 2 && columns < 6) {
+        let headers = document.querySelectorAll('th');
+        let rows = document.querySelectorAll('tbody tr');
+        let json = [];
 
-    [].forEach.call(rows, (row, i) => {
-        let cells = row.querySelectorAll('td');
-        let data = {};
-        cells.forEach.call(cells, (cell, x) => {
-            let header = headers[x].textContent;
-            let content = cell.textContent;
-            data[header] = content;
+        [].forEach.call(rows, (row, i) => {
+            let cells = row.querySelectorAll('td');
+            let data = {};
+            cells.forEach.call(cells, (cell, x) => {
+                let header = headers[x].textContent;
+                let content = cell.textContent;
+                data[header] = content;
+            });
+            json.push(data);
         });
-        json.push(data);
-    });
-    NombreRidesE = json[x.rowIndex - 1].Nombre;
-    localStorage.setItem('verRide', NombreRidesE);
+        NombreRidesE = json[x.rowIndex - 1].Nombre;
+        localStorage.setItem('verRide', NombreRidesE);
+    }
 }
 
 //dialogo

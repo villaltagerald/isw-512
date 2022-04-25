@@ -64,14 +64,27 @@ function registro() {
                 };
             };
         }
-        arrayRide.push(ride);
-        localStorage.setItem('localRides', JSON.stringify(arrayRide));
-        clear();
+        let valNombre = false;
+        if (verRides == null) {
+            for (let i = 0; i < arrayRide.length; i++) {
+                if (localStorage.getItem('username') == arrayRide[i].usuario && arrayRide[i].nombre == document.getElementById('name').value) {
+                    valNombre = true;
+                };
+            };
+        }
+        if (valNombre == false) {
+            arrayRide.push(ride);
+            localStorage.setItem('localRides', JSON.stringify(arrayRide));
+            clear();
+        } else {
+            document.getElementById('error').innerHTML = 'Nombre de Ride Existe';
+        }
+
         if (verRides != null && verRides != 'null') {
             document.location = 'Dashboard.html';
         }
-    }else{
-        document.getElementById('error').innerHTML='Falta informacion'
+    } else {
+        document.getElementById('error').innerHTML = 'Falta informacion';
     }
 };
 

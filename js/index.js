@@ -78,7 +78,7 @@ function buscarRide() {
     let hasta = document.getElementById('hasta').value;
     document.getElementById('cTabla').innerHTML = '';
     for (let i = 0; i < arrayRide.length; i++) {
-        if ((desde.toLowerCase() == arrayRide[i].salida.toLowerCase() || desde == '') && (hasta.toLowerCase() == arrayRide[i].destino.toLowerCase() || hasta == '')) {
+        if ((arrayRide[i].salida.toLowerCase().includes(desde.toLowerCase()) || desde == '') && (arrayRide[i].destino.toLowerCase().includes(hasta.toLowerCase()) || hasta == '')) {
             document.getElementById('cTabla').innerHTML += '<tr onclick="myFunction(this)"><td>' + arrayRide[i].usuario + '</td><td>' + arrayRide[i].nombre + '</td><td>' + arrayRide[i].salida + '</td><td>' + arrayRide[i].destino + '</td><td><a href="ViewR.html" onclick="myFunction(this)">VIEW</a></td></tr>';
         }
     }

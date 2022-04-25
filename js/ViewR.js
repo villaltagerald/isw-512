@@ -1,5 +1,3 @@
-
-
 function objRides(usuario, nombre, salida, destino, descripcion, horaSalida, horaLlegada, dias) {
     this.usuario = usuario;
     this.nombre = nombre;
@@ -38,6 +36,14 @@ for (let i = 0; i < arrayRide.length; i++) {
         document.getElementById('destino').value=arrayRide[i].destino;
         document.getElementById('hsalida').value=arrayRide[i].horaSalida;
         document.getElementById('hllegada').value=arrayRide[i].horaLlegada;
+        let diasRide = arrayRide[i].dias;
+            document.getElementById('Lunes').checked = diasRide.lunes;
+            document.getElementById('Martes').checked = diasRide.martes;
+            document.getElementById('Miercoles').checked = diasRide.miercoles;
+            document.getElementById('Jueves').checked = diasRide.jueves;
+            document.getElementById('Viernes').checked = diasRide.viernes;
+            document.getElementById('Sabado').checked = diasRide.sabado;
+            document.getElementById('Domingo').checked = diasRide.domingo;
     };
 };
 
@@ -45,7 +51,7 @@ let arrayUsuario = JSON.parse(localStorage.getItem('localUsuario'));
 for (let i = 0; i < arrayUsuario.length; i++) {
     if (localStorage.getItem('vUser') == arrayUsuario[i].uNombre) {
         document.getElementById('name').value=arrayUsuario[i].nombre+' '+arrayUsuario[i].pApellido+' '+arrayUsuario[i].sApellido;
-        document.getElementById('speed').value=arrayUsuario[i].velocidad;
-        document.getElementById('telefono').value=arrayUsuario[i].telefono;
+        document.getElementById('speed').value=arrayUsuario[i].velocidad==null?' ':arrayUsuario[i].velocidad;
+        document.getElementById('telefono').value=arrayUsuario[i].telefono==null?' ':arrayUsuario[i].telefono;
     };
 };
