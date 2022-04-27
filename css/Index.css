@@ -46,18 +46,10 @@ tr:nth-child(even) {
   height: auto;
   line-height: 25pt;
 }
-.table{
-  margin: 0 auto;
-  width: 98%;
-  height: auto;
-  line-height: 25pt;
-}
+
 @media screen and (max-width: 768px) {
   .body{
     width: 85%;
-  }
-  .table{
-    width: 95%;
   }
   .i_img{
     width: 10%;

@@ -14,10 +14,9 @@ body{
  
 form{
   margin: 0 auto;
-  width: 30%;
+  width: 90%;
   height: auto;
   line-height: 25pt;
-  text-align:right;
   }
 
 button {
@@ -42,9 +41,27 @@ button:disabled:hover{
 button:hover{
   color: rgb(0, 0, 0);
 }
-   
+.link {
+  color: #000000;
+  text-decoration: none;
+}
+.link:hover{
+	color: #000000;
+}
+.marco{
+  margin: 0 auto;
+  width: 40%;
+  height: auto;
+  line-height: 25pt;
+  border-color: #000000;
+  border-style: solid;
+  
+}  
 @media screen and (max-width: 768px) {
   form{
     width: 90%;
     }
+    .marco{
+      width: 95%;
+    }  
 }    

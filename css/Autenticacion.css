@@ -33,7 +33,19 @@ button {
 button:hover {
   color: rgb(0, 0, 0);
 }
-
+.link {
+  color: #000000;
+  text-decoration: none;
+}
+.link:hover{
+	color: #000000;
+}
+.marco{
+  margin-top: 20%;
+  border-color: #000000;
+  border-style: solid;
+  padding: 5%;
+}
 @media screen and (max-width: 768px) {
   .body {
     width: 75%;

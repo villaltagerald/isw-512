@@ -35,7 +35,8 @@ function objDias(lunes, martes, miercoles, jueves, viernes, sabado, domingo) {
 //localStorage.removeItem('verRide');
 
 function registro() {
-    if (document.getElementById('name').value.trim() != '' && document.getElementById('salida').value.trim() != '' && document.getElementById('destino').value.trim() != '' && document.getElementById('hsalida').value.trim() != '' && document.getElementById('hdestino').value.trim() != '') {
+    if (document.getElementById('name').value.trim() != '' && document.getElementById('salida').value.trim() != '' && document.getElementById('destino').value.trim() != '' && document.getElementById('hsalida').value.trim() != '' && document.getElementById('hdestino').value.trim() != '' &&
+        (document.getElementById('Lunes').checked || document.getElementById('Martes').checked || document.getElementById('Miercoles').checked || document.getElementById('Jueves').checked || document.getElementById('Viernes').checked || document.getElementById('Sabado').checked || document.getElementById('Domingo').checked)) {
         let arrayRide = [];
         if (localStorage.getItem('localRides') != null) {
             arrayRide = JSON.parse(localStorage.getItem('localRides'));

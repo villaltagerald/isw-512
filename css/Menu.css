@@ -9,6 +9,13 @@ html, body {
 	background-color: #1a1a27;
 	box-sizing: border-box;
 }
+a {
+	color: #000000;
+	text-decoration: none;
+  }
+a:hover{
+	color: #000000;
+}
 .navbarmenu .contenidobarmenu {
 	max-width: 1024px;
 	display:flex;
